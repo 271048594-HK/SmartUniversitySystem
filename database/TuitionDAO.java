@@ -12,7 +12,7 @@ public class TuitionDAO {
         // JOIN query to sum credit hours for all courses the student is currently enrolled in
         String sql = "SELECT SUM(c.credit_hours) AS total_credits " +
                 "FROM enrollment e " +
-                "JOIN courses c ON e.course_code = c.course_code " + // Ensure column names match your DB schema
+                "JOIN courses c ON e.course_code = c.course_code " +
                 "WHERE e.student_id = ?";
 
         try (Connection conn = DatabaseConnection.getConnection();

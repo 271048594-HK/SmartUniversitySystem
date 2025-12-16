@@ -24,7 +24,6 @@ public class GPAService {
         }
 
         // NOTE: For a more accurate W-GPA (Weighted GPA), you would need to fetch
-        // credit hours from the CourseDAO and use them in the calculation.
         return sum / grades.size();
     }
 }

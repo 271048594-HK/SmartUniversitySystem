@@ -6,7 +6,7 @@ import java.util.List;
 
 public class EnrollmentDAO {
 
-    // --- C: CREATE (Enroll Student - Course & Enrollment Module) ---
+    //  C: CREATE (Enroll Student
     public boolean enrollStudent(String studentId, String courseCode) {
         // enrollment_id is auto-incremented. grade_point is initially NULL.
         String sql = "INSERT INTO enrollment (student_id, course_code) VALUES (?, ?)";
@@ -24,7 +24,7 @@ public class EnrollmentDAO {
         }
     }
 
-    // --- R: RETRIEVE (Check Prerequisite Status - Core Logic) ---
+    //  RETRIEVE (Check Prerequisite Status - Core Logic)
     public boolean hasPassedCourse(String studentId, String courseCode) {
         // Checks if a grade exists AND if it is a passing grade (>= 2.0 as per GradeRecord.java logic)
         String sql = "SELECT grade_point FROM enrollment WHERE student_id = ? AND course_code = ? AND grade_point >= 2.0";
@@ -43,7 +43,7 @@ public class EnrollmentDAO {
         }
     }
 
-    // --- U: UPDATE (Assign Grade - Grading Module) ---
+    //  UPDATE (Assign Grade - Grading Module)
     public boolean assignGrade(String studentId, String courseCode, double gradePoint) {
         String sql = "UPDATE enrollment SET grade_point = ? WHERE student_id = ? AND course_code = ?";
         try (Connection conn = DatabaseConnection.getConnection();
@@ -64,7 +64,7 @@ public class EnrollmentDAO {
         }
     }
 
-    // --- D: DELETE (Drop Course - Course & Enrollment Module) ---
+    //  DELETE (Drop Course - Course & Enrollment Module)
     public boolean dropCourse(String studentId, String courseCode) {
         String sql = "DELETE FROM enrollment WHERE student_id = ? AND course_code = ?";
         try (Connection conn = DatabaseConnection.getConnection();

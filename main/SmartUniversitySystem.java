@@ -47,7 +47,7 @@ public class SmartUniversitySystem {
                     GradingMenu.show();
                     break;
                 case "4":
-                    // Module 4: Library Management (ADDED)
+                    // Module 4: Library Management
                     LibraryMenu.show();
                     break;
                 case "5":
@@ -85,7 +85,7 @@ public class SmartUniversitySystem {
         System.out.println("1. Registration Module (Students/Faculty/Staff)");
         System.out.println("2. Course & Enrollment Module");
         System.out.println("3. Grading & Academic Records");
-        System.out.println("4. Library Module (Books/Issue/Return)"); // <--- UPDATED
+        System.out.println("4. Library Module (Books/Issue/Return)");
         System.out.println("5. Finance Module (Tuition/Salaries)");
         System.out.println("6. Admin Module (Departments/Reports)");
         System.out.println("7. Exit");

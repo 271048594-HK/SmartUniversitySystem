@@ -34,7 +34,7 @@ public class GradingMenu {
         }
     }
 
-    //  Assign Grade Logic (CRUD: UPDATE)
+    //  Assign Grade Logic
     private static void assignGrade() {
         System.out.print("Enter Student ID: ");
         String studentId = scanner.nextLine();
@@ -56,7 +56,7 @@ public class GradingMenu {
         }
     }
 
-    //  Calculate GPA Logic (CRUD: RETRIEVE)
+    //  Calculate GPA Logic
     private static void calculateGpa() {
         System.out.print("Enter Student ID to calculate GPA: ");
         String studentId = scanner.nextLine();
@@ -76,7 +76,7 @@ public class GradingMenu {
         System.out.println("\n------------------");
     }
 
-    //  Generate Transcript Logic (CRUD: RETRIEVE)
+    //  Generate Transcript Logic
     private static void generateTranscript() {
         // This method shows a detailed view of all grades and courses
         System.out.print("Enter Student ID for Transcript: ");
@@ -89,8 +89,6 @@ public class GradingMenu {
         }
 
         // To generate a proper transcript, we would need a helper method in GradingDAO
-        // to return the course title along with the grade, which would require a JOIN.
-        // For simplicity now, we just print the GPA:
         System.out.println("--- Full Transcript (Detail requires complex JOIN, showing summary) ---");
         calculateGpa();
     }
